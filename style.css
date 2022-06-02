@@ -1,0 +1,22 @@
+* {
+  padding: 0;
+  margin: auto;
+}
+
+body {
+  background-color: gray;
+}
+
+button {
+  margin-left: 47%;
+  margin-top: 25px;
+}
+
+form {
+  display: grid;
+  margin-top: 50px;
+}
+
+input {
+  margin-top: 10px;
+}
