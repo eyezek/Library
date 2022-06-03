@@ -46,17 +46,15 @@ button.addEventListener("click", function () {
   document.getElementById("form").appendChild(formPages);
   document.getElementById("form").appendChild(formRead);
   document.getElementById("form").appendChild(submit);
-});
-
-let submit = document.getElementById("submit");
-
-submit.addEventListener("click", function addToLibrary() {
-  // take user input from form and add to myLibrary
-  const userBook1 = new book(
-    (title = document.getElementById("title").value),
-    (author = document.getElementById("author").value),
-    (pages = document.getElementById("pages").value),
-    (read = document.getElementById("read").value)
-  );
-  myLibrary.push(userBook1);
+  submit.addEventListener("click", function addToLibrary(event) {
+    // take user input from form and add to myLibrary
+    event.preventDefault();
+    const userBook1 = new book(
+      (title = document.getElementById("title").value),
+      (author = document.getElementById("author").value),
+      (pages = document.getElementById("pages").value),
+      (read = document.getElementById("read").value)
+    );
+    myLibrary.push(userBook1);
+  });
 });
