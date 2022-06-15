@@ -1,17 +1,16 @@
 let myLibrary = [];
-
 let container = document.getElementById("container");
 let card = document.getElementById("card");
 
-function book(title, author, pages, read) {
-  this.title = title;
-  this.author = author;
-  this.pages = pages;
-  this.read = read;
-  this.info =
-    this.title + " by " + this.author + ", " + this.pages + ", " + this.read;
-  myLibrary.push(this.info);
-  console.log(myLibrary);
+class book {
+  constructor(title, author, pages, read) {
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    this.read = read;
+    this.info =
+      this.title + " by " + this.author + ", " + this.pages + ", " + this.read;
+  }
 }
 
 const theHobbit = new book(
